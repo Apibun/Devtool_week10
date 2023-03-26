@@ -4,13 +4,11 @@
 
 ```
 nano install_git_docker_dockercompose.sh
-
 ```
 
 ### 2. Add the following content to install_git_docker_docker_compose.sh :
 
 ```
-
 #!/bin/bash
 
 # Update the package index and install required dependencies
