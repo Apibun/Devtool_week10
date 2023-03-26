@@ -2,8 +2,7 @@ import "./App.css";
 import axios from "axios";
 import { useState } from "react";
 
-export default function App({ host }) {
-  const Hostname = host.substring(0, host.indexOf(":"));
+export default function App() {
   const [Name, setName] = useState("");
   const [Surname, setSurname] = useState("");
   const [Numbers, setNumbers] = useState([]);
@@ -32,7 +31,7 @@ export default function App({ host }) {
     try {
       // setLoading(true);
       const result = await axios.post(
-        `http://${Hostname}:8088/process-image`,
+        `http://${window.location.hostname}:8088/process-image`,
         { image: Image, name: Name, surname: Surname, numbers: Sendnumbers },
         {
           headers: {
